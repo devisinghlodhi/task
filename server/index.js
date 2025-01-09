@@ -64,8 +64,6 @@ app.post('/api/favourites', async (req, res) => {
       Country,
       Pincode,
     } = req.body;
-  
-    console.log(Name)
 
     try {
       const result = await pool.query(
@@ -86,7 +84,7 @@ app.post('/api/favourites', async (req, res) => {
   // API to fetch all data
   app.get('/api/favourites', async (req, res) => {
     try {
-      await initializeDatabase()
+      // await initializeDatabase()
       const result = await pool.query('SELECT * FROM locations');
       res.status(200).json(result.rows);
     } catch (error) {
