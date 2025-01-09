@@ -1,4 +1,3 @@
-# Project Setup
 
 ## How to Run the Code
 
